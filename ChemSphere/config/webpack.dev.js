@@ -1,7 +1,7 @@
 const { merge } = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-
+const packageJson = require("../package.json");
 const commonConfig = require("./webpack.common");
 
 const devConfig = {
@@ -22,7 +22,7 @@ const devConfig = {
       exposes: {
         "./ChemSphereApp": "./src/bootstrap",
       },
-      shared: require("../package.json").dependencies,
+      shared: packageJson.dependencies,
     }),
   ],
 };
