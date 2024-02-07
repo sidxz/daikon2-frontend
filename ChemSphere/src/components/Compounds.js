@@ -1,7 +1,10 @@
 import React from "react";
 import { Fieldset } from "primereact/fieldset";
+import { useNavigate } from "react-router-dom";
+import { Button } from "primereact/button";
 
 const Compounds = () => {
+  const navigate = useNavigate();
   return (
     <div className="card">
       <Fieldset legend="Compounds">
@@ -15,6 +18,11 @@ const Compounds = () => {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </Fieldset>
+      <Button
+        label="Home"
+        icon="pi pi-check"
+        onClick={() => navigate("/")}
+      />
     </div>
   );
 };

@@ -12,9 +12,14 @@ const TitleBar = () => {
 
     },
     {
+      label: "ChemSphere",
+      icon: "pi pi-star",
+      command: () => navigate("/chemsphere/"),
+    },
+    {
       label: "Compounds",
       icon: "pi pi-star",
-      command: () => navigate("/compounds"),
+      command: () => navigate("/chemsphere/compounds"),
     },
     {
       label: "Projects",
